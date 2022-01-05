@@ -1,0 +1,147 @@
+
+@font-face {
+    font-family: poppins;
+    src: url(font/Poppins-light.ttf);
+}
+@font-face {
+    font-family: digitalnum;
+    src: url(fontface/digital-numbers-cufonfonts-webfont/DigitalNumbers-Regular.woff);
+}
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(2, 2, 15);
+}
+
+.container{
+    position: relative;
+    height: 300px;
+    /* width: 40%; */
+    width: 60%;
+   border: 4px solid white;
+   border-radius: 20px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px  cyan;
+}
+.displayTimer{
+    border: 2px solid white;
+    height: 130px;
+    width: 90%;
+    color: white;
+    margin: auto;
+   text-align: center;
+   font-size: 40px;
+   font-family: digitalnum;
+   border-radius: 5px;
+   text-shadow: 0 0 10px rgb(111, 222, 250),
+   0 0 20px rgb(74, 198, 247);
+   flex-wrap: wrap;
+   margin-top: -100px;
+   box-shadow: inset 0px 0px 10px 2px white;
+   padding-top: 65px;
+}
+
+
+.toogleButns{
+    text-align: center;
+    width: 90%;
+    border: 0px solid white;
+    margin: auto;
+    margin-top: 37px;
+    padding: 10px 0; 
+    margin-left: 20px;
+}
+button{
+    margin-top: 19px;
+    font-family: digitalnum;
+    font-size: 20px;
+    font-weight: 600;
+    height: 50px;
+    width: 140px;
+    border: 2px solid cyan;
+    border-radius: 30px;
+    cursor: pointer;
+    color: cyan;
+    letter-spacing: 2px;
+}
+button:hover{
+    background-color: cyan;
+     box-shadow: 0 0 20px rgb(88, 194, 255), inset 2px 2px 20px rgb(20, 48, 206);
+    color: blue;
+    border: 0px;
+}
+
+button:nth-child(2),
+button:nth-child(3){
+    margin-left: 20px;
+}
+
+@media (max-width:720px) {
+    .container{
+        height: 220px;
+        padding: auto;
+        text-align: center;
+        border-radius: 40px;
+    }
+    .displayTimer{
+        margin-top: -60px;
+        font-size: 22px;
+        height: 50px;
+        padding-top: 25px;
+    }
+    .toogleButns{
+        padding: 0px;
+        margin-top: 20px;
+        height: 180px;
+        display: inline-block;
+    }
+    button{
+        height: 30px;
+        font-size: 14px;
+    }
+    button:nth-child(2),
+    button:nth-child(3) {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:880px) {
+   
+
+    .toogleButns {
+        text-align: center;
+        padding: -30px;
+        margin-top: 0px;
+        height: 180px;
+        display: inline-block;
+    }
+
+}
+
+@media (max-width:360px) {
+    
+
+    .displayTimer {
+        margin-top: -60px;
+        font-size: 16px;
+        height: 50px;
+        padding-top: 25px;
+    }
+
+    .toogleButns {
+        padding: 0px;
+        margin-top: 20px;
+        height: 180px;
+        display: inline-block;
+    }
+
+    button {
+        height: 30px;
+        font-size: 12px;
+    }
+
+   
+}
