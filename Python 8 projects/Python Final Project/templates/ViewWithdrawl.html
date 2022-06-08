@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ViewWithdrawl.css')}}" type="text/css">
+    <title>Enter Ammount</title>
+</head>
+<body>
+
+    <section id="frontpg">
+        <div class="container-fluid bg-dark" id="bgcontainers">
+
+          <nav class="navbar navbar-expand-lg navbar-light container-fluid">
+            <div class="container-fluid" id="nav-div">
+              <a class="navbar-brand text-light" href="/">
+                <img src="{{url_for('static', filename='img/logo3.png')}}" alt="" height="40px" width="40px" id="logopng">
+                SBC</a>
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="atmlogout">EXIT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>     
+        </div>
+<! //*---------------- ATM CONTAINER --------------->
+
+        <div class="container-fluid" id="atm_div">
+            <table id="atm_table">
+                <form action="Withdlogout" method="POST">
+                <tr >
+                    <td id="bt_choice">
+                    </td>
+                    <td rowspan="2" id="atm_display">
+                        <h1>Thank You Visit Again!</h1>
+                        <div class="container-fluid" id="display_div">
+                            <div class="radioCH">
+                                <table class="table" id="withd_table">
+                                    
+                                    <tr id="div2000">
+                                        <td>Note of 2000 is : {{note[0]}}</td>
+                                    </tr>
+                                    <tr id="div500">
+                                        <td>Note of 500 is : {{note[1]}}</td>
+                                    </tr>
+                                    <tr id="div200">
+                                        <td>Note of 200 is : {{note[2]}}</td>
+                                    </tr>
+                                    <tr id="div100">
+                                        <td>Note of 100 is : {{note[3]}}</td>
+                                    </tr>
+                                    <tr id="balance2">
+                                        <td id="balance"> <b>Balance is : {{note[4]}}</b></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </td>
+                    <td id="bt_choice">
+                     
+                    </td>
+                </tr>
+                <tr id="bt_diaplay">
+                    <td id="bt_choice">
+                        
+                    </td>
+                        
+                    <td id="bt_choice">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td id="bt_choice">
+                        
+                    </td>
+
+                    <td id="sub_btn">
+                        <button class="btn-primary" value="submit" type="submit" id="prim_submit" type="submit">EXIT</button>
+                    </td>
+                    <td id="bt_choice">
+                       
+                    </td>
+                </tr>
+                </form>
+            </table>
+        </div>
+        <div class="value">
+            <p id="not2000">{{note[0]}}</p>
+            <p id="not500">{{note[1]}}</p>
+            <p id="not200">{{note[2]}}</p>
+            <p id="not100">{{note[3]}}</p>
+        </div>
+        <script>
+           const n2000 = document.getElementById("not2000");
+           const n500 = document.getElementById("note500");
+           const n200 = document.getElementById("not200");
+           const n100 = document.getElementById("not100");
+
+           const note2000 = n2000.textContent
+           const note500 = n500.textContent
+           const note200 = n200.textContent
+           const note100 = n100.textContent
+        //    console.log(typeof(note100))
+            console.log(note500)
+
+            if (note2000 == 0){
+                document.getElementById("div2000").style.display="none";
+            }
+            if (note500 == 0){
+                document.getElementById("div500").style.display="none";
+            }
+            if (note200 == 0){
+                document.getElementById("div200").style.display="none";
+            }
+            if (note100 == 0){
+                document.getElementById("div100").style.display="none";
+            }
+
+        </script>
+       
+    </section>
+
+</body>
+</html>
